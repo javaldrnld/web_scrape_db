@@ -1,0 +1,5 @@
+dash==2.12.1
+plotly==5.16.1
+pymongo==4.5.0
+python-dotenv==1.0.0
+pandas==2.1.0

@@ -1,0 +1,39 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - "./data/mongo-data:/data/db"
+    networks:
+      - app-network
+
+  scraper:
+    build: ./scraper
+    container_name: scraper
+    volumes:
+      - ./scraper:/app
+      - ./data:/data
+    depends_on:
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/scraper_db
+    networks:
+      - app-network
+
+  webapp:
+    build: ./webapp
+    container_name: webapp
+    ports:
+      - "8050:8050"
+    volumes:
+      - ./webapp:/app
+    depends_on:
+      - mongodb
+    networks:
+      - app-network
+
+# ✅ This was missing:
+networks:
+  app-network:

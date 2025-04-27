@@ -1,0 +1,45 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore node_modules if you ever have frontend dependencies
+node_modules/
+
+# Ignore local data folders (like mongo data)
+data/
+**/mongo-data/
+**/diagnostic.data/
+**/journal/
+
+# Ignore git metadata
+.git/
+.gitignore
+
+# Ignore Docker files themselves (optional)
+.dockerignore
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
+
+# Ignore environment/config files (optional if you want to copy manually later)
+.env
+*.env
+
+# Ignore other temporary files
+*.swp
+*.tmp
+*.bak
