@@ -1,0 +1,229 @@
+{
+    "columns": [
+        {
+            "name": "eq_no",
+            "datatype": "Utf8",
+            "bit_settings": "SORTED_ASC",
+            "values": [
+                "2"
+            ]
+        },
+        {
+            "name": "date",
+            "datatype": "Utf8",
+            "bit_settings": "SORTED_ASC",
+            "values": [
+                "28 Apr 2025"
+            ]
+        },
+        {
+            "name": "time",
+            "datatype": "Utf8",
+            "bit_settings": "SORTED_ASC",
+            "values": [
+                "01:18:23 AM"
+            ]
+        },
+        {
+            "name": "latitude",
+            "datatype": "Utf8",
+            "bit_settings": "SORTED_ASC",
+            "values": [
+                "19.71°N"
+            ]
+        },
+        {
+            "name": "longitude",
+            "datatype": "Utf8",
+            "bit_settings": "SORTED_ASC",
+            "values": [
+                "120.93°E"
+            ]
+        },
+        {
+            "name": "depth_km",
+            "datatype": "Utf8",
+            "bit_settings": "SORTED_ASC",
+            "values": [
+                "048"
+            ]
+        },
+        {
+            "name": "magnitude",
+            "datatype": "Utf8",
+            "bit_settings": "SORTED_ASC",
+            "values": [
+                "Mw 5.8"
+            ]
+        },
+        {
+            "name": "region",
+            "datatype": "Utf8",
+            "bit_settings": "SORTED_ASC",
+            "values": [
+                "073 km N 24° W of Dalupiri Island (Calayan) (Cagayan)"
+            ]
+        },
+        {
+            "name": "reported_intensities",
+            "datatype": {
+                "List": {
+                    "Struct": [
+                        {
+                            "name": "intensity",
+                            "dtype": "Utf8"
+                        },
+                        {
+                            "name": "locations",
+                            "dtype": "Utf8"
+                        }
+                    ]
+                }
+            },
+            "bit_settings": "SORTED_ASC | FAST_EXPLODE_LIST",
+            "values": [
+                {
+                    "name": "",
+                    "datatype": {
+                        "Struct": [
+                            {
+                                "name": "intensity",
+                                "dtype": "Utf8"
+                            },
+                            {
+                                "name": "locations",
+                                "dtype": "Utf8"
+                            }
+                        ]
+                    },
+                    "values": [
+                        {
+                            "name": "intensity",
+                            "datatype": "Utf8",
+                            "bit_settings": "",
+                            "values": [
+                                "V",
+                                "IV",
+                                "III"
+                            ]
+                        },
+                        {
+                            "name": "locations",
+                            "datatype": "Utf8",
+                            "bit_settings": "",
+                            "values": [
+                                "Calayan, CAGAYAN",
+                                "Pasuquin, Bacarra, and San Nicolas, ILOCOS NORTE",
+                                "City of Batac, ILOCOS NORTE"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "instrumental_intensities",
+            "datatype": {
+                "List": {
+                    "Struct": [
+                        {
+                            "name": "intensity",
+                            "dtype": "Utf8"
+                        },
+                        {
+                            "name": "locations",
+                            "dtype": "Utf8"
+                        }
+                    ]
+                }
+            },
+            "bit_settings": "SORTED_ASC | FAST_EXPLODE_LIST",
+            "values": [
+                {
+                    "name": "",
+                    "datatype": {
+                        "Struct": [
+                            {
+                                "name": "intensity",
+                                "dtype": "Utf8"
+                            },
+                            {
+                                "name": "locations",
+                                "dtype": "Utf8"
+                            }
+                        ]
+                    },
+                    "values": [
+                        {
+                            "name": "intensity",
+                            "datatype": "Utf8",
+                            "bit_settings": "",
+                            "values": [
+                                "IV",
+                                "III",
+                                "II",
+                                "I"
+                            ]
+                        },
+                        {
+                            "name": "locations",
+                            "datatype": "Utf8",
+                            "bit_settings": "",
+                            "values": [
+                                "City of Laoag, ILOCOS NORTE",
+                                "Aparri, and Claveria, CAGAYAN; City of Batac, ILOCOS NORTE; Sinait, ILOCOS SUR",
+                                "Gonzaga, CAGAYAN; Solsona, ILOCOS NORTE; City of Vigan, ILOCOS SUR",
+                                "Peñablanca, CAGAYAN"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "authors",
+            "datatype": {
+                "Struct": [
+                    {
+                        "name": "auth_1",
+                        "dtype": "Utf8"
+                    },
+                    {
+                        "name": "auth_2",
+                        "dtype": "Utf8"
+                    },
+                    {
+                        "name": "auth_3",
+                        "dtype": "Utf8"
+                    }
+                ]
+            },
+            "values": [
+                {
+                    "name": "auth_1",
+                    "datatype": "Utf8",
+                    "bit_settings": "SORTED_ASC",
+                    "values": [
+                        "GBD"
+                    ]
+                },
+                {
+                    "name": "auth_2",
+                    "datatype": "Utf8",
+                    "bit_settings": "SORTED_ASC",
+                    "values": [
+                        "JMG"
+                    ]
+                },
+                {
+                    "name": "auth_3",
+                    "datatype": "Utf8",
+                    "bit_settings": "SORTED_ASC",
+                    "values": [
+                        "EFRB"
+                    ]
+                }
+            ]
+        }
+    ]
+}
