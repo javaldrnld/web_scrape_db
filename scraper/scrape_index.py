@@ -89,18 +89,34 @@ def parse_datetime(date_str, time_str):
         # Handle AM/PM formats (12-hour)
         if 'AM' in time_str or 'PM' in time_str:
             try:
-                # Try 12-hour format with seconds (allow abbreviated month names)
+                # Try 12-hour format with seconds, abbreviated month
                 return datetime.strptime(datetime_str, "%d %b %Y %I:%M:%S %p")
             except ValueError:
-                # Fallback to 12-hour format without seconds
-                return datetime.strptime(datetime_str, "%d %b %Y %I:%M %p")
+                try:
+                    # Try 12-hour format without seconds, abbreviated month
+                    return datetime.strptime(datetime_str, "%d %b %Y %I:%M %p")
+                except ValueError:
+                    try:
+                        # Try 12-hour format with seconds, full month
+                        return datetime.strptime(datetime_str, "%d %B %Y %I:%M:%S %p")
+                    except ValueError:
+                        # Try 12-hour format without seconds, full month
+                        return datetime.strptime(datetime_str, "%d %B %Y %I:%M %p")
         else:
             try:
-                # Try 24-hour format with seconds
+                # Try 24-hour format with seconds, abbreviated month
                 return datetime.strptime(datetime_str, "%d %b %Y %H:%M:%S")
             except ValueError:
-                # Fallback to 24-hour format without seconds
-                return datetime.strptime(datetime_str, "%d %b %Y %H:%M")
+                try:
+                    # Try 24-hour format without seconds, abbreviated month
+                    return datetime.strptime(datetime_str, "%d %b %Y %H:%M")
+                except ValueError:
+                    try:
+                        # Try 24-hour format with seconds, full month
+                        return datetime.strptime(datetime_str, "%d %B %Y %H:%M:%S")
+                    except ValueError:
+                        # Try 24-hour format without seconds, full month
+                        return datetime.strptime(datetime_str, "%d %B %Y %H:%M")
     except ValueError as e:
         logger.error(f"Failed to parse datetime '{datetime_str}': {e}")
         return None
@@ -479,8 +495,8 @@ try:
     
     logger.info(f"Extracted {len(historical_data)} total historical earthquake events")
     
-    # all_data = current_month_data + historical_data
-    all_data = current_month_data
+    all_data = current_month_data + historical_data
+    # all_data = current_month_data
     logger.info(f"Combined data contains {len(all_data)} total earthquake events")
     
     try:

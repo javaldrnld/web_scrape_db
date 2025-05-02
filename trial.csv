@@ -1,8 +1,0 @@
-eq_no,date,time,latitude,longitude,depth_km,magnitude,region,author_1,author_2,author_3,reported_intensity,reported_locations,instrumental_intensity,instrumental_locations
-2,28 Apr 2025,01:18:23 AM,19.71°N,120.93°E,048,Mw 5.8,073 km N 24° W of Dalupiri Island (Calayan) (Cagayan),GBD,JMG,EFRB,V,"Calayan, CAGAYAN",,
-2,28 Apr 2025,01:18:23 AM,19.71°N,120.93°E,048,Mw 5.8,073 km N 24° W of Dalupiri Island (Calayan) (Cagayan),GBD,JMG,EFRB,IV,"Pasuquin, Bacarra, and San Nicolas, ILOCOS NORTE",,
-2,28 Apr 2025,01:18:23 AM,19.71°N,120.93°E,048,Mw 5.8,073 km N 24° W of Dalupiri Island (Calayan) (Cagayan),GBD,JMG,EFRB,III,"City of Batac, ILOCOS NORTE",,
-2,28 Apr 2025,01:18:23 AM,19.71°N,120.93°E,048,Mw 5.8,073 km N 24° W of Dalupiri Island (Calayan) (Cagayan),GBD,JMG,EFRB,,,IV,"City of Laoag, ILOCOS NORTE"
-2,28 Apr 2025,01:18:23 AM,19.71°N,120.93°E,048,Mw 5.8,073 km N 24° W of Dalupiri Island (Calayan) (Cagayan),GBD,JMG,EFRB,,,III,"Aparri, and Claveria, CAGAYAN; City of Batac, ILOCOS NORTE; Sinait, ILOCOS SUR"
-2,28 Apr 2025,01:18:23 AM,19.71°N,120.93°E,048,Mw 5.8,073 km N 24° W of Dalupiri Island (Calayan) (Cagayan),GBD,JMG,EFRB,,,II,"Gonzaga, CAGAYAN; Solsona, ILOCOS NORTE; City of Vigan, ILOCOS SUR"
-2,28 Apr 2025,01:18:23 AM,19.71°N,120.93°E,048,Mw 5.8,073 km N 24° W of Dalupiri Island (Calayan) (Cagayan),GBD,JMG,EFRB,,,I,"Peñablanca, CAGAYAN"
